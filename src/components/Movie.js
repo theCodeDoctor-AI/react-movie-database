@@ -26,6 +26,8 @@ const Movie = () => {
     if (loading) return <Spinner />
     if (error) return <div>Something Went Wrong...</div>
 
+    // console.log(movie.actors);
+
     return (
         <>
             <BreadCrumb movieTitle={movie.original_title}></BreadCrumb>
@@ -40,7 +42,7 @@ const Movie = () => {
                     <Actor
                         key={actor.credit_id}
                         name={actor.name}
-                        character={actor.chracter}
+                        character={actor.character}
                         imageUrl={
                             actor.profile_path
                                 ? `${IMAGE_BASE_URL}${POSTER_SIZE}${actor.profile_path}`
